@@ -1,108 +1,92 @@
 @font-face {
-    font-family: 'Helvetica Now Display';
-    src: url(./assets/HelveticaNowDisplay-Regular.woff2);
+    font-family: 'Ndot-55';
+    src: url(./fonts/Ndot-55.woff2);
+}
+@font-face {
+    font-family: 'NType82-Regular';
+    src: url(./fonts/NType82-Regular.otf);
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica Now Display';
 }
 html, body {
     height: 100%;
     width: 100%;
 }
-#main {
-    width: 100%;
+#section1 {
     height: 100%;
-}
-#main #nav {
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-}
-#main #nav h1 {
-    font-size: 22px;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-family: 'Times New Roman', Times, serif;
-}
-#main #nav #nav-right a {
-    color: black;
-    text-decoration: none;
-    font-size: 17px;
-    margin-right: 30px;
-}
-#main #nav #nav-left a {
-    color: black;
-    text-decoration: none;
-    font-size: 17px;
-    margin-right: 30px;
-}
-#main>h1 {
-    font-size: 290px;
-    font-weight: 400;
-    text-align: center;
-}
-#main #btmleft {
-    width: 250px;
-    position: absolute;
-    bottom: 17%;
-    left: 40px;
-}
-#main #btmleft h3 {
-    font-size: 23px;
-    font-weight: 700;
-}
-#main #btmleft p {
-    margin-top: 7px;
-    font-size: 15px;
-}
-#main #btmleft h4 {
-    margin-top: 30px;
-    font-size: 20px;
-    font-weight: 700;
-}
-#main #btmbar {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-    padding: 25px 40px;
-    position: absolute;
-    bottom: 0;
+    padding: 15px 495px;
+    background-image: url(./assets/hero-section.webp);
+    background-size: cover;
+    background-position: center;
 }
-#main #btmbar a {
+#section1 .nav {
+    width: 450px;
+    padding: 10px;
+    font-family: 'Ndot-55';
+    font-size: 22px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #CCCCCC;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+#section1 .nav:hover {
+    cursor: pointer;
+}
+#section1 .btm {
+    height: 175px;
+    width: 475px;
+    background-color: #8B9194;
+    bottom: 15px;
+    border-radius: 15px;
+    margin: 530px 0px;
+    font-family: 'NType82-Regular';
+}
+#section1 .btm p {
+    color: white;
+    font-size: 30px;
+    padding: 25px 25px;
+    font-weight: 100;
+}
+#section1 .btm .product-img {
+    position: absolute;
+    height: 160px;
+    bottom: 3%;
+    right: 32%;
+}
+#section2 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 15px 495px;
+    background-image: url(./assets/section-2.avif);
+    background-size: cover;
+    background-position: center;
+}
+#section2 .btm {
+    height: 175px;
+    width: 475px;
+    background-color: white;
+    bottom: 15px;
+    border-radius: 15px;
+    margin: 570px 0px;
+    font-family: 'NType82-Regular';
+}
+#section2 .btm p {
     color: black;
-    font-size: 27px;
-    text-underline-offset: 5px;
-    font-weight: 700;
+    font-size: 30px;
+    padding: 25px 25px;
+    font-weight: 100;
 }
-#main #first {
+#section2 .btm .product-img {
     position: absolute;
-    height: 350px;
-    width: 225px;
-    top: 42%;
-    right: 19%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 99;
-}
-#main #second {
-    position: absolute;
-    height: 250px;
-    width: 275px;
-    top: 65%;
-    right: 30%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 85;
-}
-#main #third {
-    position: absolute;
-    height: 275px;
-    width: 225px;
-    top: 50%;
-    right: 45%;
-    object-fit: cover;
-    object-position: center;
+    height: 160px;
+    bottom: 5%;
+    right: 33%;
 }
