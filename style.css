@@ -1,92 +1,62 @@
-@font-face {
-    font-family: 'Ndot-55';
-    src: url(./fonts/Ndot-55.woff2);
-}
-@font-face {
-    font-family: 'NType82-Regular';
-    src: url(./fonts/NType82-Regular.otf);
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'helvetica neue';
 }
 html, body {
     height: 100%;
     width: 100%;
 }
-#section1 {
+#main {
     height: 100%;
     width: 100%;
-    padding: 15px 495px;
-    background-image: url(./assets/hero-section.webp);
+    background-image: url(https://i.pinimg.com/1200x/aa/68/b9/aa68b9419cb9c664559259f150ca6009.jpg);
     background-size: cover;
     background-position: center;
 }
-#section1 .nav {
-    width: 450px;
-    padding: 10px;
-    font-family: 'Ndot-55';
-    font-size: 22px;
-    font-weight: 100;
+#main #header {
+    height: 15%;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    color: #0111338d;
+    padding: 20px;
+    text-shadow: 5px 5px 15px #6d85a8;
+}
+#main #content {
+    height: 85%;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #CCCCCC;
-    text-transform: uppercase;
-    border-radius: 10px;
+    justify-content: space-evenly;
+    padding: 75px;
+    gap: 50px;
+    overflow: auto;
+    font-size: 15px;
 }
-#section1 .nav:hover {
-    cursor: pointer;
-}
-#section1 .btm {
-    height: 175px;
-    width: 475px;
-    background-color: #8B9194;
-    bottom: 15px;
+#main #content .card {
+    height: 400px;
+    width: 300px;
+    background-color: whitesmoke;
     border-radius: 15px;
-    margin: 530px 0px;
-    font-family: 'NType82-Regular';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.357);
+    color: whitesmoke;
+    box-shadow: 15px 15px 25px #6783B3;
 }
-#section1 .btm p {
-    color: white;
-    font-size: 30px;
-    padding: 25px 25px;
-    font-weight: 100;
+#main #content .card img {
+    padding: 15px 15px;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
 }
-#section1 .btm .product-img {
-    position: absolute;
-    height: 160px;
-    bottom: 3%;
-    right: 32%;
-}
-#section2 {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    padding: 15px 495px;
-    background-image: url(./assets/section-2.avif);
-    background-size: cover;
-    background-position: center;
-}
-#section2 .btm {
-    height: 175px;
-    width: 475px;
-    background-color: white;
-    bottom: 15px;
-    border-radius: 15px;
-    margin: 570px 0px;
-    font-family: 'NType82-Regular';
-}
-#section2 .btm p {
-    color: black;
-    font-size: 30px;
-    padding: 25px 25px;
-    font-weight: 100;
-}
-#section2 .btm .product-img {
-    position: absolute;
-    height: 160px;
-    bottom: 5%;
-    right: 33%;
+#main #content .card:hover{
+    transform: scale(1.15);
+    transition: all 0.3s ease-in-out;
 }
