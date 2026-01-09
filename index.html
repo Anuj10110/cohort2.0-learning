@@ -5,42 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
 </head>
 <body>
-    <div id="main">
-        <div id="header">
-            <h1>My Travel Journal</h1>
+    <div id="nav-bar">
+        <div id="logo">
+            <i class="ri-dribbble-line"></i>
         </div>
-        <div id="content">
-            <div class="card">
-                <img src="https://i.pinimg.com/1200x/6d/16/46/6d1646737f8b4a6505542a5ba0707538.jpg" alt="">
-                <h1>Udaipur</h1>
-                <h2>Rajasthan</h2>
+        <div id="right-nav">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                Explore <i class="ri-arrow-drop-down-line"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                Find Talent <i class="ri-arrow-drop-down-line"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                Get Hired <i class="ri-arrow-drop-down-line"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                Blog
+            </a>
+        </div>
+        <div id="left-nav">
+            <button>Sign up</button>
+            <button>Log in</button>
+        </div>
+    </div>
+    <div id="main-page">
+        <div id="main-text">
+            <h1>Discover the<br>World's Top Designers</h1>
+            <p>Explore work from the most talented and accomplished<br>designers ready to take on your next project.</p>
+            <div id="services">
+                <p><i class="ri-image-line"></i> Shots</p>
+                <p><i class="ri-group-line"></i> Designers</p>
+                <p><i class="ri-file-list-2-line"></i> Services</p>
             </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/6a/ab/d2/6aabd28623971bc1a6781908700eaf9a.jpg" alt="">
-                <h1>Chandigarh</h1>
-                <h2>Punjab</h2>
+        </div>
+        <div id="search-bar">
+            <input type="text" placeholder="What type of design are you interested in?">
+            <button><i class="ri-search-line"></i></button>
+        </div>
+        <div id="main-video">
+            <video src="./assets/video.mp4" autoplay loop muted></video>
+            <div id="bottom">
+                <h1>Aleksei Pribõlovski</h1>
+                <h1><i class="ri-heart-line"></i></h1>
             </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/6e/3d/ed/6e3ded24af02cd7a7f538b835110618f.jpg" alt="">
-                <h1>Kolkata</h1>
-                <h2>West Bengal</h2>
+        </div>
+    </div>
+    <div id="content">
+        <div class="card">
+            <div id="video">
+                <video src="https://www.pexels.com/download/video/3903754/" autoplay loop muted></video>
+                <div id="bottom">
+                    <p>Rooftops Of A Town In A Mountain</p>
+                    <p><i class="ri-heart-line"></i></p>
+                </div>
             </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/86/93/d8/8693d85dd5d2f7616a44e11d779c7e3e.jpg" alt="">
-                <h1>Puri</h1>
-                <h2>Orissa</h2>
+            <div id="details">
+                <h3>Mike Sangma</h3>
+                <h3><i class="ri-download-line"></i></h3>
             </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/ec/23/33/ec233312fd782ee6a26b11f0a44234ef.jpg" alt="">
-                <h1>Nainital</h1>
-                <h2>Uttarakhand</h2>
+        </div>
+        <div class="card">
+            <div id="video">
+                <video src="https://www.pexels.com/download/video/1277672/" autoplay loop muted></video>
+                <div id="bottom">
+                    <p>Father and Child Enjoying The Day</p>
+                    <p><i class="ri-heart-line"></i></p>
+                </div>
             </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/20/4c/cd/204ccdc7b4e378bc140a49d54db3d3c8.jpg" alt="">
-                <h1>Mukteshwar</h1>
-                <h2>Uttarakhand</h2>
+            <div id="details">
+                <h3>Dhruv Ray</h3>
+                <h3><i class="ri-download-line"></i></h3>
+            </div>
+        </div>
+        <div class="card">
+            <div id="video">
+                <video src="https://www.pexels.com/download/video/4440937/" autoplay loop muted></video>
+                <div id="bottom">
+                    <p>A man kicking a soccer ball</p>
+                    <p><i class="ri-heart-line"></i></p>
+                </div>
+            </div>
+            <div id="details">
+                <h3>cottonbro studio</h3>
+                <h3><i class="ri-download-line"></i></h3>
+            </div>
+        </div>
+        <div class="card">
+            <div id="video">
+                <video src="https://www.pexels.com/download/video/4441006/" autoplay loop muted></video>
+                <div id="bottom">
+                    <p>A woman practicing karate</p>
+                    <p><i class="ri-heart-line"></i></p>
+                </div>
+            </div>
+            <div id="details">
+                <h3>cottonbro studio</h3>
+                <h3><i class="ri-download-line"></i></h3>
+            </div>
+        </div>
+        <div class="card">
+            <div id="video">
+                <video src="https://www.pexels.com/download/video/20613696/" autoplay loop muted></video>
+                <div id="bottom">
+                    <p>Busy Street in Indian City</p>
+                    <p><i class="ri-heart-line"></i></p>
+                </div>
+            </div>
+            <div id="details">
+                <h3>Hindustani Lens</h3>
+                <h3><i class="ri-download-line"></i></h3>
+            </div>
+        </div>
+        <div class="card">
+            <div id="video">
+                <video src="https://www.pexels.com/download/video/16605636/" autoplay loop muted></video>
+                <div id="bottom">
+                    <p>Crew Members Pushing a F1 Car during a Pit Stop</p>
+                    <p><i class="ri-heart-line"></i></p>
+                </div>
+            </div>
+            <div id="details">
+                <h3>Timo van Overdijk</h3>
+                <h3><i class="ri-download-line"></i></h3>
             </div>
         </div>
     </div>
