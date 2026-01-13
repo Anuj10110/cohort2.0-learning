@@ -5,67 +5,236 @@
   font-family: "helvetica neue";
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
 
-h1 {
-  height: 10%;
-  width: 100%;
-  text-align: center;
-  background-color: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.5rem;
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(244, 244, 244);
+}
+
+body {
+  background-color: #1d1d1d;
 }
 
 main {
-  height: 90%;
   width: 100%;
   display: flex;
-  padding: 25px;
-  gap: 25px;
-  background-color: black;
+  flex-direction: column;
+  gap: 0rem;
 }
-main section {
-  height: 100%;
-  flex-grow: 1;
-  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-  cursor: pointer;
+main section.view-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
 }
-main section:hover {
-  flex-grow: 3;
+main section.view-1 .top {
+  width: 100%;
 }
-main section:nth-child(1) {
-  background-image: url(https://i.pinimg.com/736x/95/4b/4b/954b4b2c110ed21c497d82749c986e8d.jpg);
+main section.view-1 .top img {
+  width: 100%;
+  border-radius: 1rem;
+}
+main section.view-1 .bottom {
+  background-color: #292929;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  border-radius: 1rem;
+}
+main section.view-1 .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+main section.view-1 .bottom .text h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+main section.view-1 .bottom .text p {
+  font-weight: 400;
+  opacity: 0.7;
+  font-size: 1.35rem;
+  line-height: 2.25rem;
+  color: #9E9D9B;
+}
+main section.view-1 .bottom .text button {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+main section.view-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  padding: 1rem;
+}
+main section.view-2 .top, main section.view-2 .bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+main section.view-2 .top .element, main section.view-2 .bottom .element {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+main section.view-2 .top .element small, main section.view-2 .bottom .element small {
+  opacity: 0.6;
+}
+main section.view-2 .top .element h2, main section.view-2 .bottom .element h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+main section.view-3 {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section.view-3 .top {
+  width: 100%;
+}
+main section.view-3 .top img {
+  width: 100%;
+  border-radius: 1rem;
+}
+main section.view-3 .bottom {
+  background-color: #292929;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+  border-radius: 1rem;
+}
+main section.view-3 .bottom p {
+  font-weight: 300;
+}
+main section.view-3 .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main section.view-3 .bottom .text h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+main section.view-3 .bottom .text .paragraph p {
+  font-weight: 400;
+  opacity: 0.7;
+  font-size: 1rem;
+  line-height: 2.25rem;
+  color: #9E9D9B;
+}
+main section.view-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+}
+main section.view-4 .card {
+  width: 100%;
+  background-image: url(./assets/view-4-img.webp);
   background-size: cover;
-  background-position: center;
+  aspect-ratio: 1/1;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  justify-content: space-between;
+  padding: 1.15rem;
 }
-main section:nth-child(2) {
-  background-image: url(https://i.pinimg.com/736x/80/0b/4b/800b4b34aa7a33970732339e64645146.jpg);
-  background-size: cover;
-  background-position: center;
+main section.view-4 .card .icon, main section.view-4 .card .bottom {
+  background-color: rgba(130, 130, 130, 0.4156862745);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid white;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
 }
-main section:nth-child(3) {
-  background-image: url(https://i.pinimg.com/1200x/8c/99/f1/8c99f169e319004f5428bffa66b788cf.jpg);
-  background-size: cover;
-  background-position: center;
+main section.view-4 .card .top {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
 }
-main section:nth-child(4) {
-  background-image: url(https://i.pinimg.com/1200x/a0/fd/b8/a0fdb8afeda2a8727ac0990aec5b6030.jpg);
-  background-size: cover;
-  background-position: center;
+main section.view-4 .card .top .icon {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50%;
 }
-main section:nth-child(5) {
-  background-image: url(https://i.pinimg.com/736x/03/b3/46/03b346b83b291e072c31375b862a6609.jpg);
-  background-size: cover;
-  background-position: center;
+main section.view-4 .card .bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
 }
-main section:nth-child(6) {
-  background-image: url(https://i.pinimg.com/736x/22/ca/35/22ca3587329e169c384367b339c95d20.jpg);
-  background-size: cover;
-  background-position: center;
+
+@media (min-width: 900px) {
+  main section.view-1 {
+    padding: 1.5rem 3rem;
+    flex-direction: row;
+  }
+  main section.view-1 .top, main section.view-1 .bottom {
+    width: 50%;
+  }
+  main section.view-1 .bottom {
+    justify-content: space-between;
+    padding: 3.5rem;
+  }
+  main section.view-1 .bottom .text {
+    gap: 1.5rem;
+  }
+  main section.view-1 .bottom .text h1 {
+    font-size: 3.25rem;
+  }
+  main section.view-1 .bottom .text p {
+    width: 80%;
+    font-size: 1.15rem;
+  }
+  main section.view-2 {
+    padding: 1.5rem 3rem;
+    flex-direction: row;
+  }
+  main section.view-3 {
+    flex-direction: row-reverse;
+    padding: 1.5rem 3rem;
+  }
+  main section.view-3 .top, main section.view-3 .bottom {
+    width: 50%;
+  }
+  main section.view-3 .bottom {
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  main section.view-3 .bottom .text {
+    gap: 1.5rem;
+  }
+  main section.view-3 .bottom .text h1 {
+    font-size: 3rem;
+  }
+  main section.view-3 .bottom .text .paragraph {
+    display: flex;
+    gap: 2rem;
+  }
+  main section.view-3 .bottom .text .paragraph p {
+    width: 50%;
+    font-size: 1rem;
+  }
+  main section.view-4 {
+    flex-direction: row;
+    padding: 1.5rem 3rem;
+  }
 }/*# sourceMappingURL=style.css.map */
