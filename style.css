@@ -1,240 +1,32 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "helvetica neue";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica neue';
 }
-
-html,
-body {
-  height: 100%;
-  width: 100%;
+html, body {
+    height: 100%;
+    width: 100%;
 }
-
-html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: rgb(244, 244, 244);
-}
-
-body {
-  background-color: #1d1d1d;
-}
-
-main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0rem;
-}
-main section.view-1 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1rem;
-}
-main section.view-1 .top {
-  width: 100%;
-}
-main section.view-1 .top img {
-  width: 100%;
-  border-radius: 1rem;
-}
-main section.view-1 .bottom {
-  background-color: #292929;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4.5rem;
-  border-radius: 1rem;
-}
-main section.view-1 .bottom .text {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-main section.view-1 .bottom .text h1 {
-  font-weight: 300;
-  text-transform: uppercase;
-}
-main section.view-1 .bottom .text p {
-  font-weight: 400;
-  opacity: 0.7;
-  font-size: 1.35rem;
-  line-height: 2.25rem;
-  color: #9E9D9B;
-}
-main section.view-1 .bottom .text button {
-  width: -moz-fit-content;
-  width: fit-content;
-  border: none;
-  outline: none;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  text-transform: uppercase;
-}
-main section.view-2 {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  width: 100%;
-  padding: 1rem;
-}
-main section.view-2 .top, main section.view-2 .bottom {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-}
-main section.view-2 .top .element, main section.view-2 .bottom .element {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-main section.view-2 .top .element small, main section.view-2 .bottom .element small {
-  opacity: 0.6;
-}
-main section.view-2 .top .element h2, main section.view-2 .bottom .element h2 {
-  font-size: 3rem;
-  font-weight: 400;
-}
-main section.view-3 {
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-main section.view-3 .top {
-  width: 100%;
-}
-main section.view-3 .top img {
-  width: 100%;
-  border-radius: 1rem;
-}
-main section.view-3 .bottom {
-  background-color: #292929;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 5.5rem;
-  border-radius: 1rem;
-}
-main section.view-3 .bottom p {
-  font-weight: 300;
-}
-main section.view-3 .bottom .text {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-main section.view-3 .bottom .text h1 {
-  font-weight: 300;
-  text-transform: uppercase;
-}
-main section.view-3 .bottom .text .paragraph p {
-  font-weight: 400;
-  opacity: 0.7;
-  font-size: 1rem;
-  line-height: 2.25rem;
-  color: #9E9D9B;
-}
-main section.view-4 {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 100%;
-  padding: 1rem;
-}
-main section.view-4 .card {
-  width: 100%;
-  background-image: url(./assets/view-4-img.webp);
-  background-size: cover;
-  aspect-ratio: 1/1;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0rem;
-  justify-content: space-between;
-  padding: 1.15rem;
-}
-main section.view-4 .card .icon, main section.view-4 .card .bottom {
-  background-color: rgba(130, 130, 130, 0.4156862745);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  border: 1px solid white;
-  border-radius: 0.75rem;
-  padding: 0.5rem;
-}
-main section.view-4 .card .top {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-}
-main section.view-4 .card .top .icon {
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 50%;
-}
-main section.view-4 .card .bottom {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.25rem 1.5rem;
-}
-
-@media (min-width: 900px) {
-  main section.view-1 {
-    padding: 1.5rem 3rem;
-    flex-direction: row;
-  }
-  main section.view-1 .top, main section.view-1 .bottom {
-    width: 50%;
-  }
-  main section.view-1 .bottom {
-    justify-content: space-between;
-    padding: 3.5rem;
-  }
-  main section.view-1 .bottom .text {
-    gap: 1.5rem;
-  }
-  main section.view-1 .bottom .text h1 {
-    font-size: 3.25rem;
-  }
-  main section.view-1 .bottom .text p {
-    width: 80%;
-    font-size: 1.15rem;
-  }
-  main section.view-2 {
-    padding: 1.5rem 3rem;
-    flex-direction: row;
-  }
-  main section.view-3 {
-    flex-direction: row-reverse;
-    padding: 1.5rem 3rem;
-  }
-  main section.view-3 .top, main section.view-3 .bottom {
-    width: 50%;
-  }
-  main section.view-3 .bottom {
-    justify-content: space-between;
-    padding: 2rem;
-  }
-  main section.view-3 .bottom .text {
-    gap: 1.5rem;
-  }
-  main section.view-3 .bottom .text h1 {
-    font-size: 3rem;
-  }
-  main section.view-3 .bottom .text .paragraph {
+body { 
+    background-color: black;
+    color: rgb(102, 237, 100);
     display: flex;
-    gap: 2rem;
-  }
-  main section.view-3 .bottom .text .paragraph p {
-    width: 50%;
-    font-size: 1rem;
-  }
-  main section.view-4 {
-    flex-direction: row;
-    padding: 1.5rem 3rem;
-  }
-}/*# sourceMappingURL=style.css.map */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+h1 {
+    font-size: 5rem;
+}
+#buttons {
+    display: flex;
+    gap: 5rem;
+}
+.btn1, .btn2 {
+    background-color: #35f127;
+    color: black;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
