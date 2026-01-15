@@ -11,21 +11,51 @@ html, body {
 main {
     height: 100%;
     width: 100%;
-    background-color: black;
-    color: white;
+    background-color: rosybrown;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.cursor {
+#full-screen {
+    height: 75%;
+    width: 25%;
+    background-color: black;
+    position: relative;
+    border-radius: 50px;
+}
+#story {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: auto;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+#story::-webkit-scrollbar {
+    display: none;
+}
+.card {
+    margin: 0 10px;
     height: 100px;
     width: 100px;
-    background-color: white;
-    position: fixed;
+    flex-shrink: 0;
+    border: solid 5px palevioletred;
     border-radius: 50%;
-    mix-blend-mode: difference;
-    transition: all linear 0.25s;
 }
-h1 {
-    font-size: 15vw;
+.card img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+#display-story {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    background-size: cover;
+    border-radius: 50px;
 }
