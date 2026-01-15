@@ -8,25 +8,24 @@ html, body {
     height: 100%;
     width: 100%;
 }
-body { 
+main {
+    height: 100%;
+    width: 100%;
     background-color: black;
-    color: rgb(102, 237, 100);
+    color: white;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+.cursor {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    position: fixed;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: all linear 0.25s;
 }
 h1 {
-    font-size: 5rem;
-}
-#buttons {
-    display: flex;
-    gap: 5rem;
-}
-.btn1, .btn2 {
-    background-color: #35f127;
-    color: black;
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    cursor: pointer;
+    font-size: 15vw;
 }
