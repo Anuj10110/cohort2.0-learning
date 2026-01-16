@@ -1,99 +1,56 @@
-let card = document.querySelector('main section .card');
-let button = document.querySelector('main section button');
+let main = document.querySelector('main')
+let btn = document.querySelector('button')
 
-let arr = [
-    {
-        Team : 'RCB',
-        Captain : 'Rajat Patidar',
-        Trophies : 1,
-        Years_Won : [2025],
-        PrimaryColor : '#7a2d34ff',
-        SecondaryColor : '#C2A34E'
-    },
-    {
-        Team : 'PBKS',
-        Captain : 'Shreyas Iyer',
-        Trophies : 0,
-        Years_Won : [],
-        PrimaryColor : '#D7181F',
-        SecondaryColor : '#FBFBFA'
-    },
-    {
-        Team : 'RR',
-        Captain : 'Sanju Samson',
-        Trophies : 1,
-        Years_Won : [2008],
-        PrimaryColor : '#EB82B5',
-        SecondaryColor : '#2E3D9A'
-    },
-    {
-        Team : 'MI',
-        Captain : 'Hardik Pandya',
-        Trophies : 5,
-        Years_Won : [2013, 2015, 2017, 2019, 2020],
-        PrimaryColor : '#2E6AB1',
-        SecondaryColor : '#FAD230'
-    },
-    {
-        Team : 'CSK',
-        Captain : 'MS Dhoni',
-        Trophies : 5,
-        Years_Won : [2010, 2011, 2018, 2021, 2023],
-        PrimaryColor : '#ffcb03',
-        SecondaryColor : '#c37e06ff'
-    },
-    {
-        Team : 'KKR',
-        Captain : 'Ajinkya Rahane',
-        Trophies : 3,
-        Years_Won : [2012, 2014, 2024],
-        PrimaryColor : '#28204A',
-        SecondaryColor : '#FEF0AE'
-    },
-    {
-        Team : 'GT',
-        Captain : 'Shubman Gill',
-        Trophies : 1,
-        Years_Won : [2022],
-        PrimaryColor : '#3a667dff',
-        SecondaryColor : '#cfaf56ff'
-    },
-    {
-        Team : 'LSG',
-        Captain : 'Rishabh Pant',
-        Trophies : 0,
-        Years_Won : [],
-        PrimaryColor : '#0648BC',
-        SecondaryColor : '#FFFFFF'
-    },
-    {
-        Team : 'SRH',
-        Captain : 'Pat Cummins',
-        Trophies : 1,
-        Years_Won : [2016],
-        PrimaryColor : '#F26522',
-        SecondaryColor : '#664b20ff'
-    },
-    {
-        Team : 'DC',
-        Captain : 'Axar Patel',
-        Trophies : 0,
-        Years_Won : [],
-        PrimaryColor : '#6c2926ff',
-        SecondaryColor : '#5f86c5ff'
-    },
-]
+let arr =   [
+    "Anuj sochta hai HTML seekh ke hacker ban jayega",
+    "CSS itna confuse karta hai ki dimag ka layout bigad jata hai",
+    "JavaScript ne toh sabki neend uda rakhi hai",
+    "Bugs itne hain ki lagta hai project nahi jungle hai",
+    "Console.log zindagi ka sahara ban chuka hai",
+    "Code chal gaya toh khud pe bharosa ho jata hai",
+    "Error aaye toh bas Google bhagwan yaad aata hai",
+    "Git push karte waqt heart attack aata hai",
+    "Commit message hota hai: final_final_v3_last",
+    "StackOverflow ke bina coder adhoora hai",
+    "Frontend banate banate backend ka darr lagta hai",
+    "Client bole simple chahiye, coder bole impossible",
+    "Project deadline aate hi laptop slow ho jata hai",
+    "Code likhne se zyada toh debug hi hota hai",
+    "Dark mode na ho toh coding hi nahi hoti",
+    "Ek bug fix karo, teen naye paida ho jate hain",
+    "Internet na ho toh coder bhi bekaar ho jata hai",
+    "Tutorial dekh ke lagta hai sab aata hai, project me sab bhool jata hai",
+    "Salary ka sapna, internship ka reality",
+    "Anuj future ka developer hai, bas thoda time aur coffee chahiye"
+];
 
+btn.addEventListener('click', function () {
+    let x = Math.random() * 100;
+    let y = Math.random() * 100;
 
-button.addEventListener('click', function () {
-    let randomIndex = Math.floor(Math.random() * arr.length);
-    card.innerHTML = `<h1>
-                        Team: ${arr[randomIndex].Team} <br>
-                        Captain: ${arr[randomIndex].Captain} <br>
-                        Trophies : ${arr[randomIndex].Trophies} <br>
-                        Years Won: ${arr[randomIndex].Years_Won}
-                    </h1>`
-    card.style.backgroundColor = arr[randomIndex].PrimaryColor;
-    card.style.color = arr[randomIndex].SecondaryColor;
+    let scale = Math.floor(Math.random() * 3);
+
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+
+    let rot = Math.floor(Math.random() * 360);
+
+    let h1 = document.createElement('h1');
+
+    h1.innerHTML = arr[Math.floor(Math.random() * arr.length)];
+
+    h1.style.position = 'absolute';
+
+    h1.style.left = `${x}%`;
+    h1.style.top = `${y}%`;
+
+    h1.style.rotate = `${rot}deg`;
+
+    h1.style.color = `rgb(${r}, ${g}, ${b})`;
+
+    h1.style.scale = scale;
+
+    main.appendChild(h1);
     
 })
