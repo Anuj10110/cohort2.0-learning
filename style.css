@@ -11,51 +11,50 @@ html, body {
 main {
     height: 100%;
     width: 100%;
-    background-color: rosybrown;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: url(https://images.unsplash.com/photo-1607734834519-d8576ae60ea6?q=80&w=2257&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
 }
-#full-screen {
-    height: 75%;
-    width: 25%;
-    background-color: black;
-    position: relative;
+main>h1 {
+    text-align: center;
+    padding: 2rem;
+    color: rgb(148, 140, 140);
+    font-size: 3rem;
+}
+section {
+    position: absolute;
+    height: 60%;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50px;
-}
-#story {
-    height: 25%;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    overflow: auto;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
-}
-#story::-webkit-scrollbar {
-    display: none;
+    justify-content: space-around;
+    padding: 1.5rem 0.5rem;
 }
 .card {
-    margin: 0 10px;
-    height: 100px;
-    width: 100px;
-    flex-shrink: 0;
-    border: solid 5px palevioletred;
-    border-radius: 50%;
+    height: 70%;
+    width: 80%;
+    background-color: transparent;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    color: transparent;
 }
-.card img {
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-}
-#display-story {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: none;
-    background-size: cover;
+button {
+    font-size: 1.15rem;
+    padding: 1rem 1.5rem;
     border-radius: 50px;
+    cursor: pointer;
+}
+button:active {
+    scale: 0.9;
 }
