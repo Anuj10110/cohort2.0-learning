@@ -8,33 +8,59 @@ html, body {
     height: 100%;
     width: 100%;
 }
-body {
-    overflow: hidden;
-}
 main {
     height: 100%;
     width: 100%;
     background-color: black;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-button {
-    padding: 10px 20px;
-    font-size: 25px;
-    font-weight: 600;
-    background-color: crimson;
-    border: none;
+.card {
+    width: 500px;
+    background-color: white;
+    padding: 50px 30px;
     border-radius: 10px;
-    cursor: pointer;
+}
+.card p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card p span {
+    font-weight: 700;
+    color: royalblue;
+}
+.outer {
+    height: 20px;
+    border-radius: 50px;
+    width: 100%;
+    background-color: rgb(197, 197, 197);
+}
+.inner {
+    height: 100%;
+    width: 0%;
+    border-radius: 50px;
+    background-color: green;
+}
+.bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.bottom h2 {
+    font-size: 35px;
+}
+.bottom button {
+    padding: 10px 20px;
+    background-color: green;
     color: white;
-    position: relative;
-    z-index: 100;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
 }
-button:active {
+.bottom button:active {
     scale: 0.95;
-}
-h1 {
-    white-space: nowrap;
 }
