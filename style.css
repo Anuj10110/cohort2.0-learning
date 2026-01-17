@@ -11,56 +11,43 @@ html, body {
 main {
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: #111;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .card {
-    width: 500px;
-    background-color: white;
-    padding: 50px 30px;
+    height: 450px;
+    width: 300px;
+    background-color: #eff;
+    padding: 20px;
+    border-radius: 27px;
+}
+.card div {
+    position: relative;
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: 325px;
+    object-fit: cover;
+    margin-bottom: 17px;
     border-radius: 10px;
 }
-.card p {
-    font-size: 18px;
+.card h2 {
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 30px;
 }
-.card p span {
-    font-weight: 700;
-    color: royalblue;
-}
-.outer {
-    height: 20px;
-    border-radius: 50px;
-    width: 100%;
-    background-color: rgb(197, 197, 197);
-}
-.inner {
-    height: 100%;
-    width: 0%;
-    border-radius: 50px;
-    background-color: green;
-}
-.bottom {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-.bottom h2 {
-    font-size: 35px;
-}
-.bottom button {
-    padding: 10px 20px;
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
-}
-.bottom button:active {
-    scale: 0.95;
+.card i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(-60deg);
+    background: linear-gradient(to bottom, rgb(179, 11, 179), rgb(243, 66, 96));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 100px;
+    opacity: 0;
+    transition: all cubic-bezier(.66,1.01,.8,1.28) 0.3s;
 }

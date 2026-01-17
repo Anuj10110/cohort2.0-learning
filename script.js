@@ -1,21 +1,18 @@
+const img = document.querySelector('img');
+const loveIcon = document.querySelector('.ri-heart-3-fill');
 
-let grow = 0;
-let btn = document.querySelector('button');
-let h2 = document.querySelector('h2');
-let inner = document.querySelector('.inner');
-btn.addEventListener('click', function() {
+img.addEventListener('dblclick', function () {
+    loveIcon.style.opacity = 1;
+    loveIcon.style.transform = 'translate(-50%, -50%) scale(1) rotate(0deg)';
 
-    btn.style.pointerEvents = 'none'
-    let time = 50 + Math.floor(Math.random() * 50);
-    let download = setInterval(function() {
-        grow++;
-        h2.innerHTML = `${grow}%`
-        inner.style.width = `${grow}%`;
-    },time);
     setTimeout(() => {
-        clearInterval(download);
-        btn.innerHTML = 'Downloaded'
-        btn.style.opacity = 0.5
-        console.log('Downloaded in ' + (time / 10) + ' seconds');
-    }, time * 100);
+        loveIcon.style.transform = 'translate(-50%, -300%) scale(1) rotate(360deg)';
+    }, 700);
+    setTimeout(() => {
+        loveIcon.style.opacity = 0;
+    }, 1000);
+    setTimeout(() => {
+        loveIcon.style.transform = 'translate(-50%, -50%) scale(0) rotate(-60deg)';
+    }, 1200);
+    
 })
