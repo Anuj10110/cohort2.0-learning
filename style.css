@@ -1,53 +1,62 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'helvetica neue';
+.container {
+  padding-top: 3vh;
+  width: 100%;
+  margin: auto;
+  columns: 6;
+  column-gap: 20px;
 }
-html, body {
-    height: 100%;
-    width: 100%;
+.container .box {
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  border-radius: 15px;
 }
-main {
-    height: 100%;
-    width: 100%;
-    background-color: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container .box img {
+  max-width: 100%;
+  min-width: 100%;
+  border-radius: 10px;
 }
-.card {
-    height: 450px;
-    width: 300px;
-    background-color: #eff;
-    padding: 20px;
-    border-radius: 27px;
+
+img:hover {
+  opacity: 0.95;
 }
-.card div {
-    position: relative;
-    overflow: hidden;
+
+.caption {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2px;
 }
-.card img {
-    width: 100%;
-    height: 325px;
-    object-fit: cover;
-    margin-bottom: 17px;
-    border-radius: 10px;
+
+@media (max-width: 1427px) {
+  .container {
+    columns: 5;
+    width: calc(100% - 40px);
+  }
 }
-.card h2 {
-    text-align: center;
-    font-size: 30px;
+@media (max-width: 1200px) {
+  .container {
+    columns: 4;
+  }
 }
-.card i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0) rotate(-60deg);
-    background: linear-gradient(to bottom, rgb(179, 11, 179), rgb(243, 66, 96));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: 100px;
-    opacity: 0;
-    transition: all cubic-bezier(.66,1.01,.8,1.28) 0.3s;
+
+@media (max-width: 1000px) {
+  .container {
+    columns: 3;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 786px) {
+  .container {
+    columns: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    columns: 1;
+  }
 }
