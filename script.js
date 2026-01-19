@@ -1,52 +1,83 @@
-var arr = [
-    {name : 'Famingos', image : 'https://images.unsplash.com/photo-1767811330901-dd9724b99812?q=80&w=1572&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
-    {name : 'Food Truck', image : 'https://images.unsplash.com/photo-1767972658753-b06d7a3eec4d?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
-    {name : 'Cabin Interior', image : 'https://plus.unsplash.com/premium_photo-1764260244682-4081893375b5?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
-    {name : 'CityScape in Japan', image : 'https://images.unsplash.com/photo-1758964114278-5123b0a6feb8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-    {name : 'Temple in Thailand', image : 'https://images.unsplash.com/photo-1767274546827-edd330df7879?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-    {name : 'Skateboarder', image : 'https://images.unsplash.com/photo-1765219266739-d953cabd06cb?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
-    {name : 'Tree Bark', image : 'https://images.unsplash.com/photo-1767895655116-5eaa98e3a05f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-]
+var products = [
+    {name : 'Minimalist Arm Chair', headline : 'Cozy corner Arm Chair', price : '20,000', image : 'https://plus.unsplash.com/premium_photo-1705169612592-32610774a5d0?q=80&w=2880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
+    {name : 'Office Chair', headline : 'Ergonomic office chair', price : '15,000', image : 'https://images.unsplash.com/photo-1612372606404-0ab33e7187ee?q=80&w=978&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
+    {name : 'Relaxation Chair', headline : 'Comfortable relaxation chair', price : '18500', image : 'https://plus.unsplash.com/premium_photo-1680112806039-244731d88d45?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
+];
+var popular = [
+    {name : 'Study Chair', headline : 'School Chair', price : '2,000', image : 'https://images.unsplash.com/photo-1640938776314-4d303f8a1380?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
+    {name : 'Office Chair', headline : 'Ergonomic office chair', price : '15,000', image : 'https://images.unsplash.com/photo-1612372606404-0ab33e7187ee?q=80&w=978&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
+    {name : 'Relaxation Chair', headline : 'Comfortable relaxation chair', price : '18500', image : 'https://plus.unsplash.com/premium_photo-1680112806039-244731d88d45?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
+];
+var cart = [];
 
-function showCards () {
+function showProducts () {
     var clutter = "";
-    arr.forEach(function (obj) {
-        clutter += `<div class="box">
-                        <img src="${obj.image}" alt="" class="cursor-pointer">
-                        <div class="caption">Lorem ipsum</div>
-                    </div>`
+    products.forEach(function (product, index) {
+        clutter += `<div class="product w-fit rounded-xl p-2 bg-white">
+                        <div class="image w-[14rem] h-[13rem] bg-zinc-200 rounded-xl overflow-hidden">
+                            <img src="${product.image}" alt="" class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="data w-full px-2 py-5">
+                            <h1 class="font-semibold text-xl leading-none tracking-tight">${product.name}</h1>
+                            <div class="flex justify-between w-full items-center mt-2">
+                            <div class="w-1/2">
+                                <h3 class="font-semibold opacity-20">${product.headline}</h3>
+                                <h4 class="font-semibold mt-2">&#x20b9; ${product.price}</h4>
+                            </div>
+                            <button data-index = '${index}' class="add w-10 h-10 rounded-full shader text-yellow-400"><i
+                                data-index = '${index}' class="add ri-add-line"></i></button>
+                        </div>
+                    </div>
+                </div>`
     })
-    
-    document.querySelector('.container').innerHTML = clutter;
+    document.querySelector('.products').innerHTML = clutter;    
 }
-
-function handleSearch() {
-    let searchInput = document.querySelector('#searchinput');
-
-    searchInput.addEventListener('focus', function () {
-        document.querySelector('.overlay').style.display = 'block';
+function showPopular () {
+    var clutter = "";
+    popular.forEach(function (product) {
+        clutter += `<div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
+                    <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="${product.image}"
+                            alt="">
+                    </div>
+                    <div class="data py-2 w-full">
+                        <h1 class="leading-none font-semibold">${product.name}</h1>
+                        <h4 class="leading-none mt-2 text-sm font-semibold opacity-20 whitespace-normal">${product.headline}</h4>
+                        <h4 class="mt-3 font-semibold text-zinc-500">&#x20b9; ${product.price}</h4>
+                    </div>
+                </div>`
     })
-
-    searchInput.addEventListener('blur', function () {
-        document.querySelector('.overlay').style.display = 'none';
-        document.querySelector('.searchdata').style.display = 'none';
+    document.querySelector('.populars').innerHTML = clutter;
+}
+function addToCart() {
+    document.querySelector('.products').addEventListener('click', function (details) {
+        if(details.target.classList.contains('add')) {
+            cart.push(products[details.target.dataset.index]);
+        }
     })
-
-    searchInput.addEventListener('input', function () {
-        const filteredArr = arr.filter(obj => obj.name.toLowerCase().startsWith(searchInput.value));
+}
+function showCart() {
+    document.querySelector('.carticon').addEventListener('click', function () {
+        document.querySelector('.cartexpnd').style.display = 'block';
         var clutter = "";
-        filteredArr.forEach(function (obj) {
-            clutter += `<div class="res flex px-8 py-3">
-                            <i class="ri-search-line font-semibold mr-5"></i>
-                            <h3 class="font-semibold">${obj.name}</h3>
+        cart.forEach(function (product, index) {
+            clutter += `<div class = "flex gap-2 bg-white p-2 rounded-lg">
+                            <div class = "w-10 h-10 flex-shrink-0 rounded-lg overflow-hidden">
+                                <img class = "w-full h-full object-cover" src = "${product.image}" alt = "">
+                            </div>
+                            <div>
+                                <h3 class = "font-semibold">${product.name}</h3>
+                                <h5 class = "text-sm font-semibold opacity-80">&#x20b9; ${product.price}</h5>
+                            </div>
                         </div>`
         })
-        document.querySelector('.searchdata').style.display = 'block';
-        document.querySelector('.searchdata').innerHTML = clutter;
+        document.querySelector('.cartexpnd').innerHTML = clutter;
     })
+
 }
 
-handleSearch();
-showCards();
+showProducts();
+showPopular();
+addToCart();
+showCart();
