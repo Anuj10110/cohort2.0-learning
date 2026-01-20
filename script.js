@@ -1,89 +1,50 @@
-let songsArr = [
-    {title : 'Arjun Vailey Ne', song : './songs/Arjan Vailly Ne.mp3', img : './images/animal.jpg'},
-    {title : 'Jale 2', song : './songs/Jale 2.mp3', img : './images/jale.jpg'},
-    {title : 'Pehle Bhi Main', song : './songs/Pehle Bhi Main.mp3', img : './images/animal.jpg'},
-    {title : 'Ram Siya Ram', song : './songs/Ram Siya Ram.mp3', img : './images/ram.jpg'},
-]
+const users = [
+  {
+    username: "Aarav Sharma",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+    profession: "Frontend Developer",
+    description: "Crafting beautiful and responsive web interfaces using modern JavaScript frameworks.",
+    tags: ["HTML", "CSS", "JavaScript", "React"]
+  },
+  {
+    username: "Neha Verma",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+    profession: "UI/UX Designer",
+    description: "Designing clean, user-friendly and conversion-focused digital experiences.",
+    tags: ["Figma", "Adobe XD", "Wireframing", "Prototyping"]
+  },
+  {
+    username: "Rohit Mehta",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    profession: "Backend Engineer",
+    description: "Building secure and scalable APIs with Node.js and databases.",
+    tags: ["Node.js", "MongoDB", "Express", "REST API"]
+  },
+  {
+    username: "Priya Singh",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+    profession: "Content Creator",
+    description: "Creating engaging tech tutorials and productivity content for YouTube.",
+    tags: ["YouTube", "Content Marketing", "SEO", "Video Editing"]
+  },
+  {
+    username: "Karan Patel",
+    image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=400&q=80",
+    profession: "Digital Marketer",
+    description: "Helping brands grow through paid ads and performance marketing strategies.",
+    tags: ["Google Ads", "Facebook Ads", "Analytics", "Growth Hacking"]
+  }
+];
 
-var poster = document.querySelector('#left');
-var allSongs = document.querySelector('#all-songs');
-var audio = new Audio();
-var selectedSong = 0;
+var clutter = "";
 
-var playbtn = document.querySelector('#play');
-var forwardbtn = document.querySelector('#forward');
-var backwardbtn = document.querySelector('#backward');
-
-function showSongs () {
-    let clutter = "";
-    songsArr.forEach(function (songsObj, idx) {
-        clutter += `<div class="song-card" id = "${idx}">
-                    <div class="part-1">
-                        <img src="${songsObj.img}" alt="">
-                        <h3>${songsObj.title}</h3>
-                    </div>
-                    <h6>2:52</h6>
-                </div>`;
-    })
-    allSongs.innerHTML = clutter;
-    audio.src = songsArr[selectedSong].song;
-    poster.style.backgroundImage = `url(${songsArr[selectedSong].img})`;
-
-
-    if (selectedSong === 0) {
-        backwardbtn.style.opacity = 0.3;
-        backwardbtn.style.pointerEvents = 'none';
-    } else {
-        backwardbtn.style.opacity = 1;
-        backwardbtn.style.pointerEvents = 'auto';
-    }
-    if (selectedSong === songsArr.length - 1) {
-        forwardbtn.style.opacity = 0.3;
-        forwardbtn.style.pointerEvents = 'none';
-    } else {
-        forwardbtn.style.opacity = 1;
-        forwardbtn.style.pointerEvents = 'auto';
-    }
-}
-
-allSongs.addEventListener('click', function (details) {
-    selectedSong = details.target.id;
-    playbtn.innerHTML = `<i class="ri-pause-mini-fill"></i>`;
-    showSongs(); 
-    audio.play();
+users.forEach(function (user) {
+    clutter += `<div class="card">
+            <img src="${user.image}" alt="">
+            <h3>${user.username}</h3>
+            <h4>${user.profession}</h4>
+            <p>${user.description}</p>
+        </div>`
 })
 
-showSongs();
-
-var flag = 0;
-playbtn.addEventListener('click', function () {
-    if (flag === 0) {
-        playbtn.innerHTML = `<i class="ri-pause-mini-fill"></i>`;
-        audio.play()
-        flag = 1
-    } else {
-        playbtn.innerHTML = `<i class="ri-play-mini-fill"></i>`;
-        audio.pause()
-        flag = 0
-    }
-})
-
-forwardbtn.addEventListener('click', function () {
-    if (selectedSong < songsArr.length - 1) {
-        selectedSong++;
-        showSongs();
-        audio.play();
-    } 
-    if (selectedSong === songsArr.length - 1) {
-        forwardbtn.style.opacity = 0.3;
-        forwardbtn.style.pointerEvents = 'none';
-    }
-})
-
-backwardbtn.addEventListener('click', function () {
-    if (selectedSong > 0) {
-        selectedSong--;
-        showSongs();
-        audio.play();
-    } 
-})
+document.querySelector('main').innerHTML = clutter;
