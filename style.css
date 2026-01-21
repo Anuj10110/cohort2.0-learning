@@ -11,59 +11,31 @@ html, body {
 main {
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(189, 175, 212);
+    background-color: #111;
+    padding: 25px 100px;
 }
-#piano {
+.elem {
+    height: 100px;
+    width: 100%;
     background-color: #222;
-    height: 400px;
-    width: 1200px;
+    margin-bottom: 25px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: relative;
-    padding: 20px 30px 30px;
-    border-radius: 14px;
-    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+    justify-content: space-between;
+    padding: 0 100px;
+    border-radius: 50px;
 }
-#piano .key {
-    height: 300px;
-    width: 55px;
-    background-color: #ddd;
-    border: 1px solid #222;
-    border-radius: 0 0 10px 10px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 12px;
+.elem h3 {
+    color: #eed;
+    font-size: 30px;
+    font-weight: 700;
+}
+.elem button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    background-color: #4CAF50;
+    color: whitesmoke;
+    border-radius: 50px;
     cursor: pointer;
-}
-#piano .key span {
-    font-size: 14px;
-    color: #222;
-}
-#piano .key.active {
-    background-color: #bbb;
-    box-shadow: inset 0 4px 8px rgba(0,0,0,.2);
-}
-#piano .key.black {
-    height: 250px;
-    width: 45px;
-    background-color: #222;
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    left: 30px;
-    z-index: 5;
-    border-radius: 0 0 10px 10px;
-}
-#piano .key.black span {
-    color: #ddd;
-}
-#piano .key.black.active {
-    background-color: #525252;
-    box-shadow: inset 0 4px 8px rgba(0,0,0,.2);
 }
