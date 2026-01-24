@@ -1,61 +1,169 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
 }
-html, body {
-    height: 100%;
-    width: 100%;
-}
+
 body {
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin: 0;
+  background: #1c1f26;
+  color: #e5e7eb;
 }
-@property --rotate{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
+
+.app {
+  display: flex;
+  height: 100vh;
 }
-@keyframes borderAnimate {
-    from {
-        --rotate: 0deg;
-    }
-    to {
-        --rotate: 360deg;
-    }
+
+/* ---------- SIDEBARS ---------- */
+
+.sidebar {
+  width: 230px;
+  padding: 16px;
+  background: #232732;
+  border-right: 1px solid #2f3440;
 }
-.box {
-    max-width: 300px;
-    padding-inline: 10px;
-    padding-bottom: 10px;
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
-    border-radius: 15px;
-    background: 
-        linear-gradient(black) padding-box,
-        conic-gradient(from var(--rotate), black, rgb(255, 0, 123), black) border-box;
-    border : 0px solid rgba(255, 255, 255, 0);
-    margin: 10px;
-    animation: borderAnimate 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-play-state: paused;
-    transition: all 0.3s linear;
-    box-shadow: 0 0 0 rgb(255, 0, 123);
-    text-shadow: 0 0 0 rgb(255, 0, 123);
+
+.sidebar:last-child {
+  border-left: 1px solid #2f3440;
+  border-right: none;
 }
-.box:hover {
-    animation-play-state: running;
-    border-width: 5px;
-    box-shadow: 0 0 50px rgb(255, 0, 123);
-    color: rgb(255, 0, 123);
-    text-shadow: 0 0 15px rgb(255, 0, 123);
+
+.sidebar h3 {
+  font-size: 13px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  margin: 12px 0 8px;
 }
-.box img {
-    width: 100%;
+
+/* ---------- BUTTONS ---------- */
+
+.sidebar button {
+  width: 100%;
+  padding: 9px;
+  margin-bottom: 8px;
+  background: #2b3040;
+  border: 1px solid #3a3f4b;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+/* ---------- INPUTS ---------- */
+
+.sidebar label {
+  display: block;
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.sidebar input {
+  width: 100%;
+  padding: 7px;
+  margin-top: 4px;
+  border-radius: 4px;
+  background: #1c1f26;
+  border: 1px solid #3a3f4b;
+  color: white;
+}
+
+/* ---------- CANVAS ---------- */
+
+.canvas-wrapper {
+  flex: 1;
+  background: #171a21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas {
+  width: 900px;
+  height: 540px;
+  background: white;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- ELEMENTS ---------- */
+
+.element {
+  position: absolute;
+  cursor: move;
+}
+
+.rectangle {
+  background: #4f46e5;
+}
+
+.text {
+  background: transparent;
+  color: #111;
+  padding: 6px;
+  font-size: 16px;
+}
+
+/* ---------- SELECTION ---------- */
+
+.selected {
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+}
+
+/* ---------- RESIZE HANDLES ---------- */
+
+.handle {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border: 1px solid black;
+  position: absolute;
+}
+
+.handle.tl {
+  top: -4px;
+  left: -4px;
+  cursor: nwse-resize;
+}
+.handle.tr {
+  top: -4px;
+  right: -4px;
+  cursor: nesw-resize;
+}
+.handle.bl {
+  bottom: -4px;
+  left: -4px;
+  cursor: nesw-resize;
+}
+.handle.br {
+  bottom: -4px;
+  right: -4px;
+  cursor: nwse-resize;
+}
+
+/* ---------- LAYERS ---------- */
+
+#layers {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#layers li {
+  background: #2b3040;
+  padding: 6px;
+  font-size: 13px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+#layers li:hover {
+  background: #3b82f6;
 }

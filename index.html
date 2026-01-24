@@ -1,16 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="box">
-        <img src="./WebCollage_angryedit.webp" alt="">
-        <h1>The Cult</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mini Design Editor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- LEFT PANEL -->
+      <aside class="sidebar">
+        <h3>Tools</h3>
+        <button id="addRect">Add Rectangle</button>
+        <button id="addText">Add Text</button>
+
+        <h3>Layers</h3>
+        <ul id="layers"></ul>
+
+        <button id="moveUp">Move Up</button>
+        <button id="moveDown">Move Down</button>
+      </aside>
+
+      <!-- CANVAS -->
+      <main class="canvas-wrapper">
+        <div id="canvas"></div>
+      </main>
+
+      <!-- RIGHT PANEL -->
+      <aside class="sidebar">
+        <h3>Properties</h3>
+
+        <label>
+          Width
+          <input type="number" id="propWidth" />
+        </label>
+
+        <label>
+          Height
+          <input type="number" id="propHeight" />
+        </label>
+
+        <label>
+          Background
+          <input type="color" id="propBg" />
+        </label>
+
+        <label>
+          Text
+          <input type="text" id="propText" />
+        </label>
+
+        <h3>Export</h3>
+        <button id="exportJSON">Export JSON</button>
+        <button id="exportHTML">Export HTML</button>
+      </aside>
     </div>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
