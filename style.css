@@ -167,3 +167,13 @@ body {
 #layers li:hover {
   background: #3b82f6;
 }
+.element {
+  transform-origin: center;
+}
+.text {
+  white-space: pre;
+}
+.sidebar input[type="color"] {
+  height: 40px;
+  border-radius: 6px;
+}
