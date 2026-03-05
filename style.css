@@ -1,22 +1,149 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'helvetica neue';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "helvetica neue";
 }
-html, body {
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    color: white;
-}
+
+html,
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  width: 100%;
 }
-p {
-    font-size: 3rem;
-    color: rgb(52, 223, 52);
-    font-family: monospace;
+
+main {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://i.pinimg.com/1200x/95/5b/43/955b437d7a0a91f60b944abf6a99a544.jpg);
+  background-size: cover;
+  background-position: center;
 }
+main header {
+  width: 100%;
+  height: 5%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+main header .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-weight: 400;
+  font-size: 15px;
+}
+main header .right p:nth-child(1) {
+  font-weight: 700;
+}
+main header .right p:nth-child(2) {
+  font-weight: 700;
+}
+main header .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+main header .left p:nth-child(1) {
+  font-size: 15px;
+}
+main header .left p:nth-child(1) i {
+  font-size: 17px;
+}
+main header .left p:nth-child(11) {
+  font-size: 15px;
+}
+main header .left p:nth-child(11) i {
+  font-size: 17px;
+}
+main header .left p:nth-child(13) {
+  font-size: 15px;
+}
+main header .left p:nth-child(14) {
+  font-size: 15px;
+}
+main .folders {
+  position: absolute;
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+main .folders .folder {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .folders .folder h1 {
+  color: skyblue;
+  font-size: 60px;
+}
+main .folders .folder h3 {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+main .spotlight {
+  position: absolute;
+  bottom: 15px;
+  left: 16%;
+  height: 8%;
+  background-color: rgba(2, 2, 2, 0.3490196078);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 0 20px;
+}
+main .spotlight .app {
+  height: 50px;
+  width: 50px;
+}
+main .spotlight .app img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+main .functions {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 225px;
+  background-color: rgba(0, 0, 0, 0.357);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.126);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: default;
+}
+main .functions .function {
+  padding: 3px 25px;
+}
+main .functions .function p {
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+main .functions .function:hover {
+  background-color: rgb(25, 116, 208);
+}
+main .functions hr {
+  border: 1px solid rgba(72, 72, 72, 0.684);
+  margin-bottom: 5px;
+}/*# sourceMappingURL=style.css.map */

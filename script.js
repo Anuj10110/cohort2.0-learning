@@ -1,24 +1,17 @@
-const h1 = document.querySelector('p');
-const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-const text =h1.innerText; 
+const functionBlock = document.querySelector('.functions');
+let flag = false;
 
-let iteration = 0;
+document.addEventListener('contextmenu', function (details) {
+    details.preventDefault();
+    functionBlock.style.top = details.y + 'px';
+    functionBlock.style.left = details.x + 'px';
+    if (!flag) {
+        flag = true;
+        functionBlock.style.display = "block";
+    }
+})
 
-function randomText () {
-    const str = text.split('').map(function (char, idx) {
-        if (idx < iteration) {
-            return char;
-        }
-        return characters.split('')[Math.floor(Math.random() * 52)];
-    }).join('');
-    h1.innerText = str;
-    iteration += 0.25;
-}
-
-
-h1.addEventListener('mouseenter', function () {
-    iteration = 0;
-    setInterval(() => {
-        randomText()
-    }, 50);
+document.addEventListener('click', function() {
+    flag = false;
+    functionBlock.style.display = "none";
 })
