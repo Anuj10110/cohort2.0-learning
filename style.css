@@ -1,149 +1,109 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "helvetica neue";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica neue';
 }
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#root{
+    height: 100%;
+    width: 100%;
 
-html,
-body {
-  height: 100%;
-  width: 100%;
 }
+#Call{
+    text-decoration: underline;
+    color: rgb(126, 119, 119);
+    cursor: pointer;
+}
+#navbar{
+    display: flex;
+    /* justify-content: space-around; */
+    background-color: white;
+    padding: 10px;
+}
+#navbar a{
+    text-decoration: none;
+    color: rgb(24, 23, 23);
+    font-size: 20px;
+    margin-left: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    font-family:  "Josefin Sans", sans-serif;
+}
+#navbar a:hover{
+    color: rgb(131, 130, 130);
+    /* text-decoration: underline; */
 
-main {
-  height: 100%;
-  width: 100%;
-  background-image: url(https://i.pinimg.com/1200x/95/5b/43/955b437d7a0a91f60b944abf6a99a544.jpg);
-  background-size: cover;
-  background-position: center;
+    /* border-radius: 10px; */
 }
-main header {
-  width: 100%;
-  height: 5%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 15px;
+#Call{
+    /* text-decoration: none; */
+    border: none;
+    background-color: transparent;
+    color: rgb(26, 26, 26);
+    font-family:  "Josefin Sans", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    padding-left: 55%;
 }
-main header .right {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  font-weight: 400;
-  font-size: 15px;
+#Call:hover{
+    /* text-decoration: underline; */
+    color: rgb(131, 130, 130);
 }
-main header .right p:nth-child(1) {
-  font-weight: 700;
+#hero_text{
+    color: rgb(139, 139, 139);
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
 }
-main header .right p:nth-child(2) {
-  font-weight: 700;
+#para{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
 }
-main header .left {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  font-size: 20px;
-  font-weight: 500;
+#hero_text_parent{
+    /* display: flex; */
+    /* justify-content: space-around; */
+    margin-top: 50px;
+    margin-left: 10%;
 }
-main header .left p:nth-child(1) {
-  font-size: 15px;
+#hero_text_parent p{
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
-main header .left p:nth-child(1) i {
-  font-size: 17px;
+#hero_text_parent_div{
+    display: ruby;
+    margin-right: 150px;
+    gap: -10%;
 }
-main header .left p:nth-child(11) {
-  font-size: 15px;
+#center_h1{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 90px;
+    margin-bottom: 20px;
 }
-main header .left p:nth-child(11) i {
-  font-size: 17px;
+#hero-para{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 25px;
+    color: rgb(100, 100, 100);
 }
-main header .left p:nth-child(13) {
-  font-size: 15px;
+#parent-center{
+    padding: 10px;
+    margin-left: 35px;
 }
-main header .left p:nth-child(14) {
-  font-size: 15px;
+#scroll-down{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 15px;
+    color: rgb(120, 120, 120);
+    margin-top: 110px;
+    margin-left: 40px;
 }
-main .folders {
-  position: absolute;
-  padding: 5px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
+#hero{
+    display: flex;
+    justify-content: center;
+    /* align-items: end; */
+    height: 100vh;
+    width: 100%;
 }
-main .folders .folder {
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-main .folders .folder h1 {
-  color: skyblue;
-  font-size: 60px;
-}
-main .folders .folder h3 {
-  color: white;
-  font-size: 14px;
-  font-weight: 700;
-}
-main .spotlight {
-  position: absolute;
-  bottom: 15px;
-  left: 16%;
-  height: 8%;
-  background-color: rgba(2, 2, 2, 0.3490196078);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 20px;
-  padding: 0 20px;
-}
-main .spotlight .app {
-  height: 50px;
-  width: 50px;
-}
-main .spotlight .app img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 5px;
-}
-main .functions {
-  display: none;
-  position: absolute;
-  top: 30%;
-  left: 40%;
-  width: 225px;
-  background-color: rgba(0, 0, 0, 0.357);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.126);
-  border-radius: 15px;
-  overflow: hidden;
-  cursor: default;
-}
-main .functions .function {
-  padding: 3px 25px;
-}
-main .functions .function p {
-  color: white;
-  font-size: 15px;
-  font-weight: 400;
-  margin-bottom: 5px;
-}
-main .functions .function:hover {
-  background-color: rgb(25, 116, 208);
-}
-main .functions hr {
-  border: 1px solid rgba(72, 72, 72, 0.684);
-  margin-bottom: 5px;
-}/*# sourceMappingURL=style.css.map */
